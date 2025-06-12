@@ -2,3 +2,14 @@
     color: #646464;
     border-top:  3px solid #ccc;
 }
+
+
+i.action-icon {
+    font-size: 22px;
+    transition: all 0.5 ease;
+    cursor: pointer;
+}
+
+i.action-icon:hover{
+    transform: scale(1.2);
+}
