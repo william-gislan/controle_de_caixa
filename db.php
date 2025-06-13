@@ -1,14 +1,14 @@
 <?php 
  
-    $host = "localhost";
-    $user = "postgres";
-    $pass = "123456";
-    $db = "controle_caixas";
+    $dsn = 'mysql:host=localhost;dbname=controle_de_caixasdb';
+    $user = 'root';
+    $pass = 'root';
 
-
-    
-    $connection_string = "host=$host dbname=$db user=$user password=$pass";
-
-    $conn = pg_connect($connection_string);
+    try{
+        $db = new PDO($dsn, $user, $pass);
+        echo "conectou";
+    } catch (PDOException $ex){
+        echo $ex->getMessage();
+    };
 
 ?>
